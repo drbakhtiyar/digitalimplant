@@ -131,8 +131,11 @@ export default async function BlogArticlePage({ params }: Props) {
   const l = lang as Lang;
 
   const articleBody = articleContent[slug];
+  const related = posts.filter((p) => p.slug !== slug).slice(0, 2);
 
   const backLabels = { az: "← Bloga qayıt", en: "← Back to blog", ru: "← Назад в блог" };
+  const relatedLabels = { az: "Digər Məqalələr", en: "Related Articles", ru: "Другие Статьи" };
+  const readLabels = { az: "Oxu →", en: "Read →", ru: "Читать →" };
 
   return (
     <>
@@ -165,6 +168,32 @@ export default async function BlogArticlePage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      {related.length > 0 && (
+        <section className="py-16 bg-dark">
+          <div className="max-w-3xl mx-auto px-5 lg:px-10">
+            <p className="text-white/40 text-[9px] tracking-[0.4em] uppercase mb-8">{relatedLabels[l]}</p>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {related.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  href={`/${l}/blog/${rp.slug}`}
+                  className="glass p-5 hover:border-sky/30 transition-colors group"
+                >
+                  <span className="text-sky text-[10px] tracking-widest uppercase border border-blue/20 px-2 py-0.5">
+                    {rp.category}
+                  </span>
+                  <h3 className="font-display font-semibold text-white text-sm mt-3 mb-2 leading-snug group-hover:text-sky transition-colors">
+                    {rp.title}
+                  </h3>
+                  <p className="text-muted text-xs leading-relaxed line-clamp-2 mb-4">{rp.excerpt}</p>
+                  <span className="text-sky text-xs font-semibold">{readLabels[l]}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTASection lang={l} />
     </>
