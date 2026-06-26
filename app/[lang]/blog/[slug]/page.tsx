@@ -5,6 +5,7 @@ import type { Lang } from "@/lib/i18n";
 import { langs, hrefLangs } from "@/lib/i18n";
 import { posts, postsBySlug } from "@/lib/blog/posts";
 import CTASection from "@/components/home/CTASection";
+import { getArticleSchema } from "@/lib/schema";
 
 interface Props {
   params: Promise<{ lang: string; slug: string }>;
@@ -181,12 +182,24 @@ export default async function BlogArticlePage({ params }: Props) {
   const articleBody = articleContent[l][slug];
   const related = posts.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const articleSchema = getArticleSchema({
+    title: post.title[l],
+    description: post.excerpt[l],
+    url: `https://digitalimplant.az/${l}/blog/${slug}`,
+    datePublished: post.isoDate,
+  });
+
   const backLabels = { az: "← Bloga qayıt", en: "← Back to blog", ru: "← Назад в блог" };
   const relatedLabels = { az: "Digər Məqalələr", en: "Related Articles", ru: "Другие Статьи" };
   const readLabels = { az: "Oxu →", en: "Read →", ru: "Читать →" };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       <section className="relative pt-28 pb-16 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue/6 blur-[120px] pointer-events-none" />
