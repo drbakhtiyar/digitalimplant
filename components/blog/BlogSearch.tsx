@@ -37,12 +37,12 @@ export default function BlogSearch({ posts, lang }: Props) {
     if (!q) return posts;
     return posts.filter(
       (p) =>
-        p.title.toLowerCase().includes(q) ||
-        p.excerpt.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
-        p.keywords.some((k) => k.toLowerCase().includes(q))
+        p.title[lang].toLowerCase().includes(q) ||
+        p.excerpt[lang].toLowerCase().includes(q) ||
+        p.category[lang].toLowerCase().includes(q) ||
+        p.keywords[lang].some((k) => k.toLowerCase().includes(q))
     );
-  }, [query, posts]);
+  }, [query, posts, lang]);
 
   return (
     <div>
@@ -72,18 +72,18 @@ export default function BlogSearch({ posts, lang }: Props) {
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sky text-[10px] tracking-widest uppercase border border-blue/20 px-2 py-0.5">
-                  {post.category}
+                  {post.category[lang]}
                 </span>
-                <span className="text-muted text-xs">{post.readTime}</span>
+                <span className="text-muted text-xs">{post.readTime[lang]}</span>
               </div>
               <h2 className="font-display font-semibold text-white text-sm leading-snug mb-3 group-hover:text-sky transition-colors">
-                {post.title}
+                {post.title[lang]}
               </h2>
               <p className="text-muted text-xs leading-relaxed flex-1 mb-5 line-clamp-3">
-                {post.excerpt}
+                {post.excerpt[lang]}
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-muted text-xs">{post.date}</span>
+                <span className="text-muted text-xs">{post.date[lang]}</span>
                 <span className="text-sky text-xs font-display font-semibold">{readLabels[lang]} →</span>
               </div>
             </Link>

@@ -24,14 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
   const post = postsBySlug[slug];
   if (!post) return {};
+  const l = (langs.includes(lang as Lang) ? lang : "az") as Lang;
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
-    keywords: post.keywords,
+    title: post.metaTitle[l],
+    description: post.metaDescription[l],
+    keywords: post.keywords[l],
     alternates: { languages: hrefLangs(`/blog/${slug}`) },
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: post.metaTitle[l],
+      description: post.metaDescription[l],
       type: "article",
       publishedTime: post.isoDate,
     },
@@ -195,16 +196,16 @@ export default async function BlogArticlePage({ params }: Props) {
           </Link>
           <div className="flex items-center gap-3 mb-5">
             <span className="text-sky text-[10px] tracking-widest uppercase border border-blue/20 px-2 py-0.5">
-              {post.category}
+              {post.category[l]}
             </span>
-            <span className="text-muted text-xs">{post.date}</span>
+            <span className="text-muted text-xs">{post.date[l]}</span>
             <span className="text-muted text-xs">·</span>
-            <span className="text-muted text-xs">{post.readTime}</span>
+            <span className="text-muted text-xs">{post.readTime[l]}</span>
           </div>
           <h1 className="font-display font-bold text-3xl md:text-4xl text-white mb-4 leading-tight">
-            {post.title}
+            {post.title[l]}
           </h1>
-          <p className="text-muted text-lg leading-relaxed">{post.excerpt}</p>
+          <p className="text-muted text-lg leading-relaxed">{post.excerpt[l]}</p>
         </div>
       </section>
 
@@ -228,12 +229,12 @@ export default async function BlogArticlePage({ params }: Props) {
                   className="glass p-5 hover:border-sky/30 transition-colors group"
                 >
                   <span className="text-sky text-[10px] tracking-widest uppercase border border-blue/20 px-2 py-0.5">
-                    {rp.category}
+                    {rp.category[l]}
                   </span>
                   <h3 className="font-display font-semibold text-white text-sm mt-3 mb-2 leading-snug group-hover:text-sky transition-colors">
-                    {rp.title}
+                    {rp.title[l]}
                   </h3>
-                  <p className="text-muted text-xs leading-relaxed line-clamp-2 mb-4">{rp.excerpt}</p>
+                  <p className="text-muted text-xs leading-relaxed line-clamp-2 mb-4">{rp.excerpt[l]}</p>
                   <span className="text-sky text-xs font-semibold">{readLabels[l]}</span>
                 </Link>
               ))}
