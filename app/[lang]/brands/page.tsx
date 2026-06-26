@@ -40,6 +40,12 @@ const brands = {
       sub: "Koreya",
       body: "MegaGen AnyRidge sistemi müxtəlif sümük növlərini — D1-dən D4-ə qədər — tək dizayn ilə əhatə etmək üçün yaradılmışdır. Unikal konus forması ilə maksimal ilkin sabitlik təmin edir. Ayna səthi cilalama texnologiyası uzunmüddətli sağlamlığı dəstəkləyir.",
     },
+    {
+      name: "EBI (Evidence Implant)",
+      logo: "/logos/ebi.png",
+      sub: "Koreya",
+      body: "Evidence Implant (EBI) Cənubi Koreyanın Daegu şəhərində fəaliyyət göstərən implant istehsalçısıdır. Submerged Hex sistemi, BLT II OS və BLT II OS Taper seriyaları ilə müxtəlif klinik vəziyyətlərə uyğun həllər təklif edir. S.L.A. səthi texnologiyası güclü osseointegrasiya üçün optimallaşdırılmışdır.",
+    },
   ],
   en: [
     {
@@ -65,6 +71,12 @@ const brands = {
       logo: "/logos/megagen.svg",
       sub: "South Korea",
       body: "The MegaGen AnyRidge system is designed to cover multiple bone types — D1 to D4 — with a single design. Its unique conical shape provides maximum initial stability. Mirror-surface polishing technology supports long-term health.",
+    },
+    {
+      name: "EBI (Evidence Implant)",
+      logo: "/logos/ebi.png",
+      sub: "South Korea",
+      body: "Evidence Implant (EBI) is a South Korean implant manufacturer based in Daegu. The Submerged Hex system, BLT II OS and BLT II OS Taper series offer solutions for a wide range of clinical situations. The S.L.A. surface technology is optimised for strong osseointegration.",
     },
   ],
   ru: [
@@ -92,13 +104,19 @@ const brands = {
       sub: "Южная Корея",
       body: "Система MegaGen AnyRidge разработана для охвата различных типов кости одним дизайном. Уникальная коническая форма обеспечивает максимальную первичную стабильность.",
     },
+    {
+      name: "EBI (Evidence Implant)",
+      logo: "/logos/ebi.png",
+      sub: "Южная Корея",
+      body: "Evidence Implant (EBI) — южнокорейский производитель имплантов из Тэгу. Системы Submerged Hex, BLT II OS и BLT II OS Taper охватывают широкий спектр клинических ситуаций. Технология поверхности S.L.A. оптимизирована для надёжной оссеоинтеграции.",
+    },
   ],
 };
 
 const meta = {
-  az: { title: "İmplant Markaları | Digital Implant Bakı", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen — Digital Implant klinikasında istifadə olunan premium implant sistemləri." },
-  en: { title: "Implant Brands | Digital Implant Baku", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen — premium implant systems used at Digital Implant clinic." },
-  ru: { title: "Бренды Имплантов | Digital Implant Баку", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen — премиальные системы имплантов в клинике Digital Implant." },
+  az: { title: "İmplant Markaları | Digital Implant Bakı", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen, EBI — Digital Implant klinikasında istifadə olunan premium implant sistemləri." },
+  en: { title: "Implant Brands | Digital Implant Baku", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen, EBI — premium implant systems used at Digital Implant clinic." },
+  ru: { title: "Бренды Имплантов | Digital Implant Баку", desc: "Straumann, Bredent copaSKY, NeoBiotech, MegaGen, EBI — премиальные системы имплантов в клинике Digital Implant." },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

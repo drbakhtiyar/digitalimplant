@@ -24,6 +24,11 @@ const brands = [
     logo: "/logos/megagen.svg",
     tag: { az: "AnyRidge Texnologiyası", en: "AnyRidge Technology", ru: "Технология AnyRidge" },
   },
+  {
+    name: "EBI (Evidence Implant)",
+    logo: "/logos/ebi.png",
+    tag: { az: "Koreya Keyfiyyəti", en: "Korean Quality", ru: "Корейское Качество" },
+  },
 ];
 
 const content = {
@@ -49,7 +54,7 @@ export default function BrandsSection({ lang }: BrandsSectionProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
           {brands.map((b) => (
             <div
               key={b.name}
