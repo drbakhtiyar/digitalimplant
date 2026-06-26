@@ -11,6 +11,7 @@ const staticRoutes = [
   "/3shape",
   "/workflow",
   "/brands",
+  "/gallery",
   "/faq",
   "/about",
   "/blog",
