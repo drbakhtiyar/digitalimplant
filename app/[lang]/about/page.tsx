@@ -45,7 +45,7 @@ const content = {
       "ITI (International Team for Implantology) üzvü",
       "Avropa Rəqəmsal İmplantologiya Kursları — İsveçrə, Almaniya, İtaliya",
       "15+ il yalnız implantologiya",
-      "3000+ implant əməliyyatı",
+      "3100+ implant əməliyyatı",
     ],
   },
   en: {
@@ -78,7 +78,7 @@ const content = {
       "ITI (International Team for Implantology) member",
       "European Digital Implantology Courses — Switzerland, Germany, Italy",
       "15+ years exclusively in implantology",
-      "3000+ implant procedures",
+      "3100+ implant procedures",
     ],
   },
   ru: {
@@ -111,7 +111,7 @@ const content = {
       "Член ITI (International Team for Implantology)",
       "Европейские курсы по цифровой имплантологии — Швейцария, Германия, Италия",
       "15+ лет исключительно имплантология",
-      "3000+ имплантационных операций",
+      "3100+ имплантационных операций",
     ],
   },
 };

@@ -13,7 +13,7 @@ const content = {
     cta1: "Randevu Al",
     cta2: "Xidmətlər",
     stats: [
-      { n: "3000+", l: "İmplant" },
+      { n: "3100+", l: "İmplant" },
       { n: "15+", l: "İl Təcrübə" },
       { n: "0.1mm", l: "Dəqiqlik" },
       { n: "98%", l: "Uğur Nisbəti" },
@@ -27,7 +27,7 @@ const content = {
     cta1: "Book Appointment",
     cta2: "Our Services",
     stats: [
-      { n: "3000+", l: "Implants" },
+      { n: "3100+", l: "Implants" },
       { n: "15+", l: "Years Experience" },
       { n: "0.1mm", l: "Precision" },
       { n: "98%", l: "Success Rate" },
@@ -41,7 +41,7 @@ const content = {
     cta1: "Записаться",
     cta2: "Наши услуги",
     stats: [
-      { n: "3000+", l: "Имплантов" },
+      { n: "3100+", l: "Имплантов" },
       { n: "15+", l: "Лет Опыта" },
       { n: "0.1мм", l: "Точность" },
       { n: "98%", l: "Успеха" },

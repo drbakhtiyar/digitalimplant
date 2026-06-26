@@ -8,7 +8,7 @@ const content = {
     label: "Həkim",
     name: "Dr. Bakhtiyar Əliyev",
     title: "Digital İmplantologiya üzrə Ekspert",
-    bio: "Dr. Bakhtiyar Əliyev 15 ildən artıq müddətdir ki, yalnız implantologiya sahəsində ixtisaslaşmış dişçilik fəaliyyəti aparır. 3000-dən çox uğurlu implant əməliyyatı icra etmiş, Avropa üzrə rəqəmsal implantologiya kurslarını tamamlamış və 3Shape sertifikatlı mütəxəssisdir. Hər planlaşdırma şəxsən özü tərəfindən aparılır — vücudunuza uyğun individual yanaşma isə bu fərqin əsasını təşkil edir.",
+    bio: "Dr. Bakhtiyar Əliyev 15 ildən artıq müddətdir ki, yalnız implantologiya sahəsində ixtisaslaşmış dişçilik fəaliyyəti aparır. 3100-dən çox uğurlu implant əməliyyatı icra etmiş, Avropa üzrə rəqəmsal implantologiya kurslarını tamamlamış və 3Shape sertifikatlı mütəxəssisdir. Hər planlaşdırma şəxsən özü tərəfindən aparılır — vücudunuza uyğun individual yanaşma isə bu fərqin əsasını təşkil edir.",
     creds: [
       "3Shape Sertifikatlı Mütəxəssis",
       "Straumann Partner Klinikası",
@@ -36,7 +36,7 @@ const content = {
     label: "Врач",
     name: "Др. Бахтияр Алиев",
     title: "Эксперт в Цифровой Имплантологии",
-    bio: "Д-р Бахтияр Алиев более 15 лет специализируется исключительно на имплантологии. Провёл более 3000 успешных имплантационных операций, прошёл курсы по цифровой имплантологии в Европе и является сертифицированным специалистом 3Shape. Каждое планирование он проводит лично — индивидуальный подход, адаптированный к вашей анатомии, лежит в основе разницы.",
+    bio: "Д-р Бахтияр Алиев более 15 лет специализируется исключительно на имплантологии. Провёл более 3100 успешных имплантационных операций, прошёл курсы по цифровой имплантологии в Европе и является сертифицированным специалистом 3Shape. Каждое планирование он проводит лично — индивидуальный подход, адаптированный к вашей анатомии, лежит в основе разницы.",
     creds: [
       "Сертифицированный специалист 3Shape",
       "Клиника-партнёр Straumann",
