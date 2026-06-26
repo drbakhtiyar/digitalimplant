@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import type { Lang } from "@/lib/i18n";
 import { langs } from "@/lib/i18n";
 
@@ -36,6 +37,7 @@ export default async function LangLayout({ children, params }: Props) {
       <Header lang={lang as Lang} />
       <main className="flex-1">{children}</main>
       <Footer lang={lang as Lang} />
+      <WhatsAppButton />
     </div>
   );
 }
